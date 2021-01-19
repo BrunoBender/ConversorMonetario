@@ -1,0 +1,37 @@
+body{
+    background-color: rgb(172, 94, 94);
+}
+
+#geral{
+    width: 70%;
+    height: 300px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: white;
+    display: flex;
+}
+
+
+.forms{
+    width: 50%;
+    height: 270px;
+    padding: 10px;
+
+    border-width: 5px;
+    border-style: solid;
+    border-color: teal;
+}
+
+#ladoEsquerdo{
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    height: 240px;
+}
+
+#paragrafo{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Exercício 08</title>
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div id="geral">
+            <form action="" method="GET" id="ladoEsquerdo" class="forms">
+                <label for="#getValor">Valor: </label>
+                <input type="number" id="getValor"><br>
+
+                <p>
+                    <input type="radio" name="moeda" id="real" checked>
+                    <label for="#real">Real</label><br>
+                    <input type="radio" name="moeda" id="dolarA">
+                    <label for="#dolarA">Dolar Americano</label><br>
+                    <input type="radio" name="moeda" id="euro">
+                    <label for="#euro">Euro</label><br>
+                    <input type="radio" name="moeda" id="libra">
+                    <label for="#libra">Libra</label><br>
+                    <input type="radio" name="moeda" id="dolarC">
+                    <label for="#dolarC">Dolar Canadence</label><br>
+                </p>
+                <input type="button" name="nameBotao" id="botao" value="Start" onclick="converter()">
+
+            </form>
+
+            <form action="" method="GET" id="ladoDireito" class="forms">
+                <h2><center>Conversões</h2>
+                <p id="paragrafo">
+                    <label for="#outReal">Real: </label>
+                    <output id="outReal">0</output><br>
+                    <label for="#outDolarA">Dolar Americano: </label>
+                    <output id="outDolarA">0</output><br>
+                    <label for="#outEuro">Euro: </label>
+                    <output id="outEuro">0</output><br>
+                    <label for="#outLibra">Libra: </label>
+                    <output id="outLibra">0</output><br>
+                    <label for="#outDolarC">Dolar Canadence: </label>
+                    <output id="outDolarC">0</output><br>
+                </p>
+            </form>
+        </div>
+
+    </main>
+
+    <footer></footer>
+
+    <script>
+        function converter(){
+            var valor = Number(document.getElementById('getValor').value);
+            var opReal = Number(document.getElementById('real').checked);
+            var opDolarA = Number(document.getElementById('dolarA').checked);
+            var opEuro = Number(document.getElementById('euro').checked);
+            var opLibra = Number(document.getElementById('libra').checked);
+            var opDolarC = Number( document.getElementById('dolarC').checked);
+            var valorReal;
+            var valorDolarA;
+            var valorEuro;
+            var valorLibra;
+            var valorDolarC;
+
+            if (opReal) {
+                valor = valor;
+            } else if (opDolarA){
+                valor = valor / 0.19;
+            }else if (opEuro){
+                valor = valor / 0.16;
+            }else if (opLibra){
+                valor = valor / 0.14;
+            }else if (opDolarC){
+                valor = valor / 0.24;
+            }
+                valorReal = valor;
+                valorDolarA = valor * 0.19;
+                valorEuro = valor * 0.16;
+                valorLibra = valor * 0.14;
+                valorDolarC = valor * 0.24;
+
+                document.getElementById('outReal').textContent = valorReal;
+                document.getElementById('outDolarA').textContent = valorDolarA;
+                document.getElementById('outEuro').textContent = valorEuro;
+                document.getElementById('outLibra').textContent = valorLibra;
+                document.getElementById('outDolarC').textContent = valorDolarC;
+                
+
+        }
+
+    </script>
+</body>
+</html>
